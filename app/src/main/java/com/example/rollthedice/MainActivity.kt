@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random.Default.nextInt
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var diceImage:ImageView
+    private lateinit var diceImage: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Sets the content to view for user when activity is created
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun rollDice() {
         // Obtaining a random number from 1 to 6 and drawable id
-        val drawableName = when(nextInt(6) + 1) {
+        val drawableName = when (nextInt(6) + 1) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3
