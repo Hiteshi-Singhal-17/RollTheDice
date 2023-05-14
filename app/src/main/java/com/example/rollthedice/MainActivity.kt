@@ -7,21 +7,25 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random.Default.nextInt
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var diceImage:ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Sets the content to view for user when activity is created
         setContentView(R.layout.activity_main)
+        // Obtaining the reference of button
         val rollButton: Button = findViewById(R.id.roll_button)
+        // Obtaining the reference of image view
+        diceImage = findViewById(R.id.dice_image)
+        // Setting the click listener on button that invokes rollDice()
         rollButton.setOnClickListener {
             rollDice()
         }
     }
 
     /**
-     * Displays the number from 1 to 6
+     * Displays the dice image from 1 to 6
      */
     private fun rollDice() {
-        // Obtaining the reference of text view
-        val diceImage: ImageView = findViewById(R.id.dice_image)
         // Obtaining a random number from 1 to 6 and drawable id
         val drawableName = when(nextInt(6) + 1) {
             1 -> R.drawable.dice_1
