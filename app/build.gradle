@@ -9,12 +9,13 @@ android {
 
     defaultConfig {
         applicationId "com.example.rollthedice"
-        minSdk 28
+        minSdk 19
         targetSdk 33
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
